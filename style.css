@@ -1,0 +1,254 @@
+/* ========= Color & Font Setup ========= */
+:root {
+  --theme-color: #1E90FF;
+  --text-dark: #333;
+  --light-bg: #f4faff;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--theme-color);
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--theme-color);
+}
+
+/* ========= HERO SECTION ========= */
+header {
+  background: var(--theme-color);
+  color: white;
+  text-align: center;
+  padding: 20px 15px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; 
+  min-height: 10vh; 
+}
+
+.profile {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+
+header h1 {
+  font-size: 2.1rem; /* was 2.5rem */
+  margin: 5px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.resume-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Primary Button */
+.btn {
+  background: white;
+  color: var(--theme-color);
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: white;
+}
+
+/* Secondary Outline Button */
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--theme-color);
+}
+
+
+
+header {
+  animation: fadeDown 1s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ========= SECTIONS ========= */
+section {
+  max-width: 950px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+section h2 {
+  font-size: 1.9rem;
+  border-left: 6px solid var(--theme-color);
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ========= SKILLS ========= */
+ul {
+  padding-left: 20px;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* ========= PROJECT CARDS ========= */
+.card {
+  background: var(--light-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: 0.3s;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--theme-color);
+}
+
+/* ========= CONTACT ========= */
+#contact a {
+  color: var(--theme-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ========= FOOTER ========= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #dfefff;
+  margin-top: 30px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
+  }
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--theme-color);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+#scrollTopBtn:hover {
+  background: #0c66c2;
+  transform: translateY(-3px);
+}
+/* Fade-in animation */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.profile {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  display: block;
+  margin: 0 auto 15px auto;
+}
