@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+	<title>Sai Deepak Portfolio</title>
+	<link rel='stylesheet' href='style.css'/>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+	<h2 class="logo">Sai Deepak</h2>
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#projects">Projects</a></li>
+		<li><a href="#education">Education</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+</nav>
+
+<body>
+
+<header>
+	<img src="profile.jpg" class="profile" alt="Profile Photo">
+	<h1>Sai Deepak</h1>
+	<p>Engineering Graduate </p>
+	<p>Java | Python | MATLAB</p>
+	<div class="resume-buttons">
+    	<a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+    	<a href="resume.pdf" download class="btn-outline">Download</a>
+	</div>
+
+
+</header>
+
+<section id="about">
+	<h2>About Me</h2>
+	<p>I’m an ambitious and detail-oriented engineering graduate with interest in automation, electrical systems and software development.
+            I enjoy working on practical projects like E-bikes and simulations while learning machine learning and data analytics.
+	</p>
+</section>
+
+<section id="skills">
+	<h2>Skills</h2>
+	<ul>
+		<li>Java</li>
+		<li>Python</li>
+		<li>MATLAB</li>
+		<li>C-Language</li>
+		<li>MS Excel</li>
+	</ul>
+</section>
+
+<section id="projects">
+	<h2>Projects</h2>
+	<h3>Electric Bicycle with Regenerative Braking</h3>
+        	<p>Designed a prototype E-bike capable of recovering energy during braking to improve performance and efficiency.</p>
+
+        	<h3>MATLAB Simulation – E-Bike Model</h3>
+        	<p>Built a MATLAB model to analyze motor behavior and regenerative braking performance under test conditions.</p>
+</section>
+
+<section id='education'>
+	<h2>Education</h2>
+	<p><strong>B.Tech – Electrical & Electronics Engineering</strong><br>Dadi Institute of Engineering & Technology (2025)</p>
+        	<p><strong>Diploma – Electrical Engineering</strong><br>Sanketika Polytechnic (2022)</p>
+</section>
+
+<section id="contact">
+        <h2>Contact</h2>
+        <p>Email: kotlasaideepak@gmail.com</p>
+        <p>Phone: +91 80747 27098</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kotla-sai-deepak-8bb5b2284" target="_blank">Click Here</a></p>
+    </section>
+
+    <footer>
+        <p>&#169; 2025 Sai Deepak — All Rights Reserved</p>
+    </footer>
+
+<button id="scrollTopBtn">⬆</button>
+
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// Show button when scrolling
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+// Scroll to top smooth
+scrollBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+<script>
+// Scroll Fade Animation
+const faders = document.querySelectorAll("section, header, .card");
+
+const appearOptions = {
+  threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("show");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+// Apply fade class to items
+faders.forEach(item => {
+  item.classList.add("fade");
+  appearOnScroll.observe(item);
+});
+</script>
+
+</body>
+</html>
+
+	
